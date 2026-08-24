@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Parcel - Express Courier</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-stars">
+
+  <!-- Background Stars Container -->
+  <div class="bg-stars-container">
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">🚚 <span>Express Courier</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">📦 Register</a>
+      <a href="track.html" class="nav-link">🔍 Track</a>
+      <a href="admin.html" class="nav-link">👨‍💼 Admin</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>📦 Register New Parcel</h2>
+
+    <form id="parcel-form">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+        <div>
+          <label style="display: block; font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Sender Name</label>
+          <div class="search-wrapper">
+            <input type="text" id="sender-name" placeholder="John Doe" required>
+          </div>
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Receiver Name</label>
+          <div class="search-wrapper">
+            <input type="text" id="receiver-name" placeholder="Jane Smith" required>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Delivery Address</label>
+        <div class="search-wrapper">
+          <input type="text" id="delivery-address" placeholder="123 Main St, City" required>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+        <div>
+          <label style="display: block; font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Weight (kg)</label>
+          <div class="search-wrapper">
+            <input type="text" id="parcel-weight" placeholder="1.5" required>
+          </div>
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.8rem; color: #94a3b8; font-weight: 600; margin-bottom: 6px;">Service Type</label>
+          <div class="search-wrapper">
+            <input type="text" id="service-type" placeholder="Standard / Express" required>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-search" style="width: 100%; padding: 14px; font-size: 1rem;">Register Parcel</button>
+    </form>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

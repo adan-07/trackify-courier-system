@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Express Courier</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-orbs">
+
+  <!-- Background Floating Orbs Container -->
+  <div class="bg-orb-container">
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">🚚 <span>Express Courier</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">📦 Register</a>
+      <a href="track.html" class="nav-link">🔍 Track</a>
+      <a href="admin.html" class="nav-link active">👨‍💼 Admin</a>
+    </div>
+  </nav>
+
+  <div class="container" style="max-width: 950px;">
+    <h2>👨‍💼 Admin Dashboard</h2>
+
+    <div style="overflow-x: auto; margin-top: 20px;">
+      <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+        <thead>
+          <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8;">
+            <th style="padding: 12px;">Tracking ID</th>
+            <th style="padding: 12px;">Sender</th>
+            <th style="padding: 12px;">Receiver</th>
+            <th style="padding: 12px;">Status</th>
+            <th style="padding: 12px;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="admin-parcel-list">
+          <!-- Dynamically populated via JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

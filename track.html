@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Parcel - Express Courier</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-radar">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">🚚 <span>Express Courier</span></a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">📦 Register</a>
+      <a href="track.html" class="nav-link active">🔍 Track</a>
+      <a href="admin.html" class="nav-link">👨‍💼 Admin</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2>🔍 Track Your Parcel</h2>
+
+    <form id="track-form">
+      <div class="search-wrapper">
+        <input type="text" id="tracking-input" placeholder="Enter Tracking ID (e.g. TRK-ENX1FC)" required>
+        <button type="submit" class="btn-search">Track</button>
+      </div>
+    </form>
+
+    <div id="error-msg" style="display: none; color: #f87171; font-size: 0.85rem; margin-top: 12px; text-align: center;"></div>
+
+    <div id="tracking-result">
+      <div class="status-header">
+        <div>
+          <span style="font-size: 0.75rem; color: #64748b; font-weight: 700; text-transform: uppercase;">Tracking ID</span>
+          <div id="display-id" class="tracking-id-title">TRK-XXXXXX</div>
+        </div>
+        <div>
+          <span id="current-status-badge" class="badge-status">Booked</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-progress" id="timeline-progress"></div>
+        <div class="step" id="step-Booked">
+          <div class="step-icon">1</div>
+          <div class="step-label">Booked</div>
+        </div>
+        <div class="step" id="step-Picked Up">
+          <div class="step-icon">2</div>
+          <div class="step-label">Picked Up</div>
+        </div>
+        <div class="step" id="step-In Transit">
+          <div class="step-icon">3</div>
+          <div class="step-label">In Transit</div>
+        </div>
+        <div class="step" id="step-Out for Delivery">
+          <div class="step-icon">4</div>
+          <div class="step-label">Out for Delivery</div>
+        </div>
+        <div class="step" id="step-Delivered">
+          <div class="step-icon">5</div>
+          <div class="step-label">Delivered</div>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-item"><span>Sender</span> <strong id="meta-sender">-</strong></div>
+        <div class="detail-item"><span>Receiver</span> <strong id="meta-receiver">-</strong></div>
+        <div class="detail-item"><span>Service Type</span> <strong id="meta-service">-</strong></div>
+        <div class="detail-item"><span>Package Weight</span> <strong id="meta-weight">-</strong></div>
+        <div class="detail-item" style="grid-column: span 2;"><span>Delivery Address</span> <strong id="meta-address">-</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Assistant -->
+  <button id="chat-widget-btn">💬</button>
+
+  <div id="chat-box">
+    <div style="padding: 14px 18px; background: rgba(30, 41, 59, 0.6); display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.08);">
+      <span style="font-weight: 700; color: #60a5fa; font-size: 0.9rem;">💬 Parcel Assistant</span>
+      <button id="close-chat-btn" style="background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 1.1rem;">✕</button>
+    </div>
+    <div id="chat-messages" style="flex: 1; padding: 14px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; font-size: 0.85rem;">
+      <div style="background: rgba(30, 41, 59, 0.8); color: #e2e8f0; padding: 10px 14px; border-radius: 12px; max-width: 85%;">
+        Hello! How can I assist you with your delivery today?
+      </div>
+    </div>
+    <div style="padding: 12px; background: rgba(30, 41, 59, 0.6); display: flex; gap: 8px;">
+      <input type="text" id="chat-input" placeholder="Ask a question..." style="padding: 8px 12px; font-size: 0.85rem; background: #0f172a; border-radius: 8px;">
+      <button id="send-chat-btn" class="btn-search" style="padding: 0 16px; font-size: 0.85rem;">Send</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
